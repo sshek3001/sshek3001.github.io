@@ -8,104 +8,132 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#about" class="nav-logo">Shivam Shekhar</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
+    <main class="portfolio-container">
+        <!-- Hero & Navigation Section -->
+        <section class="hero-grid">
+            <!-- Profile Photo & Header Text -->
+            <div class="profile-card">
+                <div class="profile-img-wrapper">
+                    <img src="resource/profile-pic.png" alt="Shivam Shekhar" class="profile-img">
+                </div>
+                <div class="hero-titles">
+                    <h1>SHIVAM<br>SHEKHAR</h1>
+                    <p class="tagline">SOLVING PROBLEMS...</p>
+                </div>
             </div>
-        </div>
-    </nav>
 
-    <main class="container">
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="hero">
-                <h1>Hi, I'm Shivam.</h1>
-                <p class="tagline">Backend Software Engineer & MS AI (Infrastructure) Student at Columbia University (Expected Dec 2027).</p>
-                <div class="contact-links">
-                    <a href="mailto:ss7953@columbia.edu" class="btn">Email Me</a>
-                    <a href="https://www.linkedin.com/in/shivamshekhar3001/" target="_blank" class="btn btn-outline">LinkedIn</a>
-                    <a href="https://github.com/sshek3001" target="_blank" class="btn btn-outline">GitHub</a>
+            <!-- Action Buttons Stack -->
+            <div class="button-stack">
+                <a href="https://www.linkedin.com/in/shivamshekhar3001/" target="_blank" class="nav-button">
+                    <span class="btn-text">LINKEDIN</span>
+                    <div class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </div>
+                    <span class="chevron">›</span>
+                </a>
+
+                <a href="https://github.com/sshek3001" target="_blank" class="nav-button">
+                    <span class="btn-text">GITHUB</span>
+                    <div class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </div>
+                    <span class="chevron">›</span>
+                </a>
+
+                <a href="https://instagram.com" target="_blank" class="nav-button">
+                    <span class="btn-text">INSTAGRAM</span>
+                    <div class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                    <span class="chevron">›</span>
+                </a>
+
+                <a href="#about" class="nav-button">
+                    <span class="btn-text">ABOUT ME</span>
+                    <span class="chevron">›</span>
+                </a>
+
+                <a href="#work-experience" class="nav-button">
+                    <span class="btn-text">WORK EXPERIENCE</span>
+                    <span class="chevron">›</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="content-box">
+            <h2 class="box-title">ABOUT ME</h2>
+            <div class="about-content">
+                <p>
+                    GRADUATE STUDENT AT COLUMBIA PURSUING MASTER OF SCIENCE IN ARTIFICIAL INTELLIGENCE[cite: 1, 2].
+                    BACKEND SOFTWARE ENGINEER WITH HANDS-ON EXPERIENCE BUILDING DISTRIBUTED SYSTEMS
+                    AND HIGH-THROUGHPUT BACKEND SERVICES ACROSS FINTECH AND Y COMBINATOR-BACKED STARTUP
+                    ENVIRONMENTS (EX-AMERICAN EXPRESS, EX-AVOCA YC W23)[cite: 1, 2]. A GRADUATE OF IIT PATNA ('23)[cite: 1, 2].
+                </p>
+                <div class="education-logos">
+                    <div class="logo-card">
+                        <img src="resource/columbia-logo.png" alt="Columbia Engineering Logo">
+                    </div>
+                    <div class="logo-card">
+                        <img src="resource/IIT-Patna-logo.jpg" alt="IIT Patna Logo">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <span class="skill-badge">Go</span>
-                <span class="skill-badge">Python</span>
-                <span class="skill-badge">TypeScript</span>
-                <span class="skill-badge">C/C++</span>
-                <span class="skill-badge">Java</span>
-                <span class="skill-badge">Node.js</span>
-                <span class="skill-badge">PostgreSQL</span>
-                <span class="skill-badge">AWS</span>
-                <span class="skill-badge">Docker</span>
-                <span class="skill-badge">CI/CD</span>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <h2>Experience</h2>
+        <!-- Work Experience Section -->
+        <section id="work-experience" class="content-box">
+            <h2 class="box-title">WORK EXPERIENCE</h2>
             
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Software Engineer</h3>
-                    <span class="card-date">Jan 2026 - Jul 2026</span>
-                </div>
-                <div class="card-subtitle">Avoca.ai | Remote, India</div>
-                <ul class="card-list">
-                    <li>Spearheaded technical onboarding for high-volume Service Titan clients and built workflows for over 100 voice-agents.</li>
-                    <li>Designed custom Post Call Webhooks resolving high priority booking issues.</li>
-                </ul>
-            </div>
+            <div class="experience-list">
+                <!-- American Express -->
+                <div class="job-item">
+                    <div class="job-header">
+                        <div class="company-brand">
+                            <div class="logo-card company-logo">
+                                <img src="resource/amex.png" alt="American Express Logo">
+                            </div>
+                            <h3>AMERICAN EXPRESS</h3>[cite: 1, 2]
+                        </div>
+                    </div>
+                    <div class="job-role">
+                        <span>SOFTWARE ENGINEER</span> · <span class="dates">(JUNE 2023 - DECEMBER 2025)</span>[cite: 2]
+                    </div>
+                    <ul class="job-details">
+                        <li>DEVELOPED NEW CUSTOMER JOURNEY FLOWS FOR INTERNATIONAL MARKET CARD MEMBERS, ENABLING BENEFITS FOR MILLIONS OF USERS[cite: 1, 2].</li>
+                        <li>DEVELOPED DEVELOPER-TOOLS AND CAPABILITIES USING GOLANG, INCREASING EFFICIENCY REMEDIATION PROCESS FOR MILLIONS OF CUSTOMER PROFILES[cite: 1, 2].</li>
+                    </ul>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Software Engineer</h3>
-                    <span class="card-date">Jun 2023 - Jan 2026</span>
+                    <div class="job-role sub-role">
+                        <span>SOFTWARE ENGINEER INTERN</span> · <span class="dates">(MAY 2022 - JULY 2023)</span>[cite: 2]
+                    </div>
+                    <ul class="job-details">
+                        <li>CONSTRUCTED AN AUTOMATED TESTING PROGRAM FOR THE PERFORMANCE TESTING OF THE TWO-STAGE LMS FORM USING JMETER, FOR LOAD TESTING OF MORE THAN 10,000 SIMULTANEOUS API REQUESTS[cite: 1, 2].</li>
+                    </ul>
                 </div>
-                <div class="card-subtitle">American Express | Bangalore, India</div>
-                <ul class="card-list">
-                    <li>Developed customer journey flows for International Market Card Members, enabling benefits for millions of users.</li>
-                    <li>Developed developer-tools using Golang and streamlined CI/CD pipelines, reducing time on each pipeline by 40%.</li>
-                    <li>Resolved 50+ high-priority defects, improving platform stability.</li>
-                </ul>
-            </div>
-        </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Support Ticket Agent</h3>
-                    <span class="card-date">Sep 2026</span>
+                <!-- Avoca -->
+                <div class="job-item">
+                    <div class="job-header">
+                        <div class="company-brand">
+                            <div class="logo-card company-logo">
+                                <img src="resource/avoca.png" alt="Avoca Logo">
+                            </div>
+                            <h3>AVOCA</h3>[cite: 1, 2]
+                        </div>
+                    </div>
+                    <div class="job-role">
+                        <span>SOFTWARE ENGINEER</span> · <span class="dates">(JANUARY 2026 - JULY 2026)</span>[cite: 1, 2]
+                    </div>
+                    <ul class="job-details">
+                        <li>SPEARHEADED TECHNICAL ONBOARDING FOR HIGH-VOLUME SERVICE TITAN CLIENTS, ENSURING SEAMLESS DEPLOYMENT AND ADOPTION OF AVOCA'S INBOUND RESPONDER AND HUMAN-TOOLS PRODUCTS[cite: 1, 2].</li>
+                        <li>BUILT END-TO-END WORKFLOWS AND CONFIGURATIONS FOR VOICE-AGENTS MINIMISING CONVERSATIONAL ISSUES DURING A PHONE CALL WITH CUSTOMERS[cite: 1, 2].</li>
+                        <li>DESIGNED CUSTOM POST CALL WEBHOOKS AND CONFIG FOR CUSTOMERS, SETTLING HIGH PRIORITY BOOKING RELATED ISSUES FOR CLIENTS WITH OVER 1000 CALLS PER MONTH[cite: 1, 2].</li>
+                    </ul>
                 </div>
-                <div class="card-subtitle">Tech: Python, Pytorch, NodeJS</div>
-                <p class="card-desc">Designed a support ticket classification system mapping project-specific tickets to priority levels (P1-P4) using Llama 3.2 1B-Instruct, utilizing 4-bit QLORA fine-tuning and Direct Preference Optimization (DPO).</p>
-                <a href="https://github.com/sshek3001" target="_blank" class="project-link">View Source Code →</a>
-            </div>
-
-            <div class="card github-redirect">
-                <p>View the rest of my open-source work and projects on GitHub.</p>
-                <a href="https://github.com/sshek3001" target="_blank" class="btn">Go to my GitHub</a>
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>© 2026 Shivam Shekhar. Built for GitHub Pages.</p>
-    </footer>
 
 </body>
 </html>
