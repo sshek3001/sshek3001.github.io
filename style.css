@@ -208,10 +208,6 @@ ul{ margin: 0; padding: 0; list-style: none; }
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(60px); /* nudge right — increase/decrease as needed */
-}
-.photo-mask{
-  transform: translateY(36px); /* moves just the picture down */
 }
 .photo-mask{
   width: min(100%, 520px);
@@ -231,8 +227,8 @@ ul{ margin: 0; padding: 0; list-style: none; }
 }
 .spark{
   position: absolute;
-  right: 6%;
-  bottom: 4%;
+  right: 48%;
+  top: 73%;
   color: var(--ink);
   font-size: 1.4rem;
   opacity: 0.85;
