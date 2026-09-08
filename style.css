@@ -52,7 +52,7 @@ body::before{
   inset: 0;
   z-index: -1;
   background:
-    url('resource/background.png') center / cover no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('resource/background.png') center / cover no-repeat,
     radial-gradient(120% 90% at 88% 92%, #ff3fa0 0%, #b8188f 22%, #5c1370 46%, #200a2c 68%, var(--bg-black) 86%);
 }
 
@@ -145,6 +145,15 @@ ul{ margin: 0; padding: 0; list-style: none; }
 .btn .icon--chevron{
   background: transparent;
   font-size: 1.1rem;
+}
+.icon-glyph{
+  width: 16px;
+  height: 16px;
+  fill: #ff66c4;
+  display: block;
+}
+.icon-glyph path{
+  fill: #ff66c4 !important;
 }
 .btn--outline{
   display: inline-flex;
