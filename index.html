@@ -171,6 +171,28 @@
   }, { threshold: 0.5 });
   sections.forEach(function (s) { if (s) observer.observe(s); });
 </script>
+<script>(function typeName(){
+  var lines = document.querySelectorAll('.name span');
+  var speed = 200; // ms per character — raise for slower, lower for faster
 
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var texts = Array.from(lines).map(function(el){ return el.textContent; });
+  lines.forEach(function(el){ el.textContent = ''; el.style.borderRight = '3px solid var(--accent)'; });
+
+  function typeLine(el, text, i, cb){
+    if (i <= text.length){
+      el.textContent = text.slice(0, i);
+      setTimeout(function(){ typeLine(el, text, i + 1, cb); }, speed);
+    } else {
+      el.style.borderRight = 'none';
+      if (cb) cb();
+    }
+  }
+
+  typeLine(lines[0], texts[0], 0, function(){
+    typeLine(lines[1], texts[1], 0);
+  });
+})();</script>
 </body>
 </html>
