@@ -1,4 +1,4 @@
-/* Neue Machina Font Setup - Updated for folder structure */
+/* Neue Machina Local Font Setup */
 @font-face {
     font-family: 'Neue Machina';
     src: url('fonts/neue-machina-font-family/neuemachina-light.otf') format('opentype');
@@ -20,16 +20,16 @@
     font-style: normal;
 }
 
-/* Custom Color Variables */
+/* Custom Variables */
 :root {
     --black: #08050c;
-    --midnight-violet: #1e1729;
-    --vintage-lavender: #6e5c87;
-    --amethyst-smoke: #9b8cb6;
+    --border-color: rgba(135, 110, 165, 0.4);
+    --hover-border: rgba(185, 150, 220, 0.8);
+    --text-muted: #9b8cb6;
     --porcelain: #f6f6ee;
 }
 
-/* Global Reset & Base Styles */
+/* Global Styles */
 html {
     scroll-behavior: smooth;
 }
@@ -50,118 +50,124 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: var(--porcelain);
+    overflow-x: hidden;
+}
+
+/* Fullscreen Scroll-Snap Container */
+.portfolio-snap-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.section-page {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
     display: flex;
-    justify-content: center;
-    padding: 2rem 1rem;
-    min-height: 100vh;
-}
-
-/* Layout Container */
-.portfolio-container {
-    width: 100%;
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-/* Hero Grid Layout */
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
-
-@media (max-width: 768px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Profile Card */
-.profile-card {
-    background-color: rgba(30, 23, 41, 0.9);
-    border: 1px solid var(--vintage-lavender);
-    border-radius: 4px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    backdrop-filter: blur(5px);
+    padding: 2rem;
+}
+
+/* Container Glass Card */
+.glass-card {
+    background-color: rgba(18, 12, 28, 0.82);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 1050px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Section 1 Layout */
+.hero-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-titles h1 {
+    font-size: 2.2rem;
+    line-height: 1.05;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    color: var(--porcelain);
+    margin-bottom: 0.75rem;
+}
+
+.hero-titles .tagline {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
 }
 
 .profile-img-wrapper {
-    width: 100%;
-    max-width: 260px;
-    aspect-ratio: 1;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
 }
 
 .profile-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: contrast(1.05);
+    border-radius: 2px;
 }
 
-.hero-titles h1 {
-    font-size: 1.8rem;
-    line-height: 1.1;
-    letter-spacing: 1px;
-    font-weight: 800;
-    color: var(--porcelain);
-    margin-bottom: 0.5rem;
-}
-
-.hero-titles .tagline {
-    font-size: 0.85rem;
-    color: var(--amethyst-smoke);
-    letter-spacing: 0.5px;
-}
-
-/* Button Stack Structure */
+/* Sleek Transparent Navigation Buttons */
 .button-stack {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
+    gap: 0.85rem;
 }
 
 .nav-button {
-    background-color: rgba(30, 23, 41, 0.9);
-    border: 1px solid var(--vintage-lavender);
+    background: transparent;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
-    padding: 1rem 1.25rem;
+    padding: 0.9rem 1.2rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     text-decoration: none;
     color: var(--porcelain);
-    transition: all 0.2s ease;
+    transition: all 0.25 ease;
     cursor: pointer;
-    backdrop-filter: blur(5px);
 }
 
 .nav-button:hover {
-    border-color: var(--amethyst-smoke);
-    background-color: rgba(38, 30, 53, 0.95);
-    transform: translateX(4px);
+    border-color: var(--hover-border);
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateX(5px);
 }
 
 .btn-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     letter-spacing: 1px;
     font-weight: 800;
 }
 
+.btn-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
 .btn-icon {
-    margin-left: auto;
-    margin-right: 1rem;
-    width: 22px;
-    height: 22px;
-    color: var(--amethyst-smoke);
+    width: 18px;
+    height: 18px;
+    color: var(--porcelain);
     display: flex;
     align-items: center;
 }
@@ -172,48 +178,41 @@ body {
 }
 
 .chevron {
-    color: var(--amethyst-smoke);
-    font-size: 1.4rem;
+    color: var(--porcelain);
+    font-size: 1.2rem;
     line-height: 1;
 }
 
-.nav-button .chevron:first-child {
-    margin-left: auto;
-}
-
-/* Content Boxes (About & Experience) */
-.content-box {
-    background-color: rgba(30, 23, 41, 0.9);
-    border: 1px solid var(--vintage-lavender);
-    border-radius: 4px;
-    padding: 1.75rem;
-    scroll-margin-top: 2rem;
-    backdrop-filter: blur(5px);
-}
-
+/* Section Headings */
 .box-title {
-    font-size: 1.1rem;
-    color: var(--amethyst-smoke);
-    border-bottom: 1px solid var(--vintage-lavender);
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 0.75rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     letter-spacing: 1px;
     font-weight: 800;
 }
 
-/* About Content Layout */
-.about-content p {
-    font-size: 0.85rem;
-    line-height: 1.6;
+/* Section 2: About Layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-text {
+    font-size: 0.88rem;
+    line-height: 1.7;
     color: var(--porcelain);
-    margin-bottom: 1.5rem;
     letter-spacing: 0.5px;
 }
 
 .education-logos {
     display: flex;
-    gap: 1.5rem;
-    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .logo-card {
@@ -223,8 +222,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 80px;
+    width: 110px;
+    height: 70px;
 }
 
 .logo-card img {
@@ -233,24 +232,24 @@ body {
     object-fit: contain;
 }
 
-/* Work Experience Layout & Logos */
+/* Section 3: Work Experience Layout */
 .experience-list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .company-brand {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
 }
 
 .company-logo {
-    width: 60px;
-    height: 40px;
-    padding: 0.25rem;
+    width: 50px;
+    height: 35px;
+    padding: 0.2rem;
 }
 
 .job-item h3 {
@@ -260,14 +259,14 @@ body {
 }
 
 .job-role {
-    font-size: 0.8rem;
-    color: var(--amethyst-smoke);
-    margin-bottom: 0.75rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
     font-weight: 800;
 }
 
 .sub-role {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
 }
 
 .job-details {
@@ -275,9 +274,37 @@ body {
 }
 
 .job-details li {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     line-height: 1.5;
     color: var(--porcelain);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     letter-spacing: 0.3px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 850px) {
+    .section-page {
+        height: auto;
+        min-height: 100vh;
+        padding: 1.5rem;
+    }
+
+    .portfolio-snap-container {
+        height: auto;
+        overflow-y: visible;
+        scroll-snap-type: none;
+    }
+
+    .hero-card {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-logos {
+        flex-direction: row;
+    }
 }
